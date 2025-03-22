@@ -1,4 +1,8 @@
+
+
+
 import React from "react";
+import { Link } from "react-router-dom";
 import "../styles/Scores.css";
 
 const Scores = () => (
@@ -8,14 +12,16 @@ const Scores = () => (
       <div className="header">Wins</div>
       <div className="header">Losses</div>
       {[...Array(7)].map((_, i) => (
-        <>
-          <div>Player_{i + 1}</div> <div>{Math.floor(Math.random() * 20)}</div> <div>{Math.floor(Math.random() * 10)}</div>
-        </>
+        <React.Fragment key={i}>
+          <div>Player_{i + 1}</div>
+          <div>{Math.floor(Math.random() * 20)}</div>
+          <div>{Math.floor(Math.random() * 10)}</div>
+        </React.Fragment>
       ))}
     </div>
     <div className="button-group">
-      <button className="btn" onClick={() => window.location.href = "/game"}>Play Again</button>
-      <button className="btn" onClick={() => window.location.href = "/"}>Back to Home</button>
+      <Link className="btn" to="/game">Play Again</Link>
+      <Link className="btn" to="/">Back to Home</Link>
     </div>
   </main>
 );
