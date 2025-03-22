@@ -1,0 +1,127 @@
+
+
+  main {
+    font-family: Arial, sans-serif;
+    padding-top: 80px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: calc(100vh - 80px); 
+    padding: 2rem;
+    box-sizing: border-box; 
+    
+}
+
+
+.scores-table {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    width: 80%;
+    max-width: 600px;
+    margin-top: 20px;
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    padding: 10px;
+}
+
+.scores-table .header {
+    font-weight: bold;
+    background-color: #004080;
+    color: white;
+    padding: 10px;
+}
+
+
+
+.scores-table th, .scores-table td {
+    border: 1px solid #ddd;
+    padding: 12px;
+    text-align: center;
+}
+
+.scores-table th {
+    background-color: #004080;
+    color: white;
+}
+
+.scores-table tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.scores-table tr:hover {
+    background-color: #ddd;
+}
+
+.button-group {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.btn {
+    padding: 10px 20px;
+    font-size: 1rem;
+    background-color: #004080;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.btn:hover {
+    transform: scale(0.95);
+
+    background-color: #002b5e;
+
+}
+
+@media (max-width: 768px) {
+    main {
+        padding-top: 80px;
+    }
+    .scores-table {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr); 
+        width: 100%;
+        font-size: 12px; 
+        padding: 5px;
+        transform: scale(0.9); 
+    }
+
+    .scores-table div {
+        padding: 5px;
+    }
+
+    .scores-table .header {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    main {
+        padding-top: 80px;
+    }
+    .scores-table {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr); 
+        width: 100%;
+        font-size: 12px; 
+        padding: 5px;
+        transform: scale(0.9); 
+    }
+
+    .scores-table div {
+        padding: 5px;
+    }
+
+    .scores-table .header {
+        font-size: 14px;
+    }
+}
